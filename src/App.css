@@ -1,0 +1,78 @@
+.logo{
+  color: white;
+}
+.fa-github{
+  margin-right: 1rem;
+}
+.mr-auto{
+  margin-left: 4rem;
+}
+.colorize{
+  color: white;
+}
+.navBarLinks{
+  color: white;
+}
+
+#exampleInput{
+  width: 35%;
+}
+.input-form {
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+.mb-5 {
+  padding-left: 20rem;
+}
+
+.bg {
+  background-image: url("./img//woman-sitting-while-operating-macbook-pro-1181676.jpg");
+
+  /* Half height */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 22%;
+}
+#banner{
+  padding-top: 4rem;
+  padding-bottom:  4rem;
+  text-align: center;
+}
+a:hover{
+    text-decoration:none;
+}
+.section-padding {
+	padding: 60px 0;
+}
+.bottom {
+    background-color: #0a1c2e;
+}
+.bottom .copyright {
+    color: #e5e5e5;
+    font-weight: 600;
+}
+.copyright a {
+    color: #f2ff49;
+    margin-left: 3px;
+    padding-right: 3px;
+}
+.bottom p {
+    margin-bottom: 0;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.copyright p span {
+    color: #d1caca;
+}
+.bottom .copyright p, .bottom .copyright a:hover{
+    color: #6c6d83;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+}
