@@ -55,7 +55,7 @@ class App extends Component {
                     <Users users={this.state.users} />
                 </Fragment>
               )} />
-              <Route exact path='/home' component={LandingPage} />
+              <Route exact path='/home' component={Landing} />
               <Route exact path='/login' component={Login} />
               <Route exact path='/signup' component={Signup} />
               <Route exact path='/user/:login' render={props => (
