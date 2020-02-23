@@ -1,14 +1,19 @@
 import React from 'react'
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-dark bg-dark">
-                        <a href='/home' className="navbar-brand"><h2>
+                <Router>
+                    <div className="container">
+                        <Link to='/' className="navbar-brand"><h2>
                             <i className='fab fa-github' />{'   '}
                             Github Users
                         </h2>
-                        </a>
+                        </Link>
+                    </div>
+                </Router>
             </nav>
         </div>
     )
