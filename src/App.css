@@ -76,3 +76,6 @@ a:hover{
   display: flex;
   flex-direction: row;
 }
+.wider{
+  padding: 1% 21% 1% 21%;
+}
