@@ -7,6 +7,7 @@ import Login from './components/pages/Login';
 import Signup from './components/pages/Signup';
 import Navbar from './components/layouts/Navbar';
 import Users from './components/users/Users';
+import User from './components/users/User';
 import Search from './components/users/Search';
 import Alert from './components/layouts/Alert';
 
@@ -29,27 +30,41 @@ class App extends Component {
     this.setState({ alert: { message } });
     setTimeout(() => this.setState({ alert: null }), 2000);
   }
+  getUser = async username => {
+
+    const res = await axios.get(
+      `https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`
+    );
+    this.setState({ user: res.data });
+  };
   render() {
     return (
       <div>
-        <Navbar />
         <Router>
-        <Alert alert={this.state.alert} />
-          <Switch>
-          <Route exact path='/' render={props => (
-              <Fragment>
-                <Search
+        <div>
+          <Navbar />
+          <div>
+            <Alert alert={this.state.alert} />
+            <Switch>
+              <Route exact path='/' render={props => (
+                <Fragment>
+                    <Search
                       searchUsers={this.searchUsers}
                       setAlert={this.setAlert}
                     />
                     <Users users={this.state.users} />
                 </Fragment>
               )} />
-            <Route exact path='/home' component={Landing} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/signup' component={Signup} />
-          </Switch>
-        </Router>
+              <Route exact path='/home' component={LandingPage} />
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/signup' component={Signup} />
+              <Route exact path='/user/:login' render={props => (
+                <User {...props} getUser={this.getUser} user={this.state.user} />
+                )} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
       </div>
     )
   }
