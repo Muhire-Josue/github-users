@@ -4,7 +4,7 @@ const Signup = () => {
     return (
         <Fragment>
             <div className='container'>
-                <form className='input-form'>
+                <form className='input-form' action='/'>
                     <div className="form-group">
                         <label htmlFor="exampleInput">Username</label>
                         <input type="text" className="form-control" id="exampleInput" aria-describedby="emailHelp" placeholder="Enter username" />
