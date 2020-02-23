@@ -5,20 +5,6 @@ const Landing = () => {
     return (
         <Fragment>
             <Router>
-                <nav className="navbar navbar-dark bg-dark">
-                    <div className="container">
-                        <Link to='/' className="navbar-brand" href="#"><h2>
-                            <i className='fab fa-github' />
-                            Github Users
-                        </h2>
-                        </Link>
-                        <ul className='navbar-nav mr-auto'>
-                            <li className='nav-item'>
-                                <Link to="/login" className='nav-link'><span className='colorize'>Login</span></Link>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
                 <div className='bg'>
                 </div>
                 <div className='container'>
